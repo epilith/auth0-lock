@@ -13,7 +13,7 @@ Polymer element for login using auth0.
         scope: "openid profile"         // default: openid
     };
 
-    document.querySelector('auth0-lock').addEventListener('loggedIn', function (profile) {
+    document.querySelector('auth0-lock').addEventListener('logged-in', function (profile) {
         console.log(profile);
         
         // try to get delegated access to Firebase
