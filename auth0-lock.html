@@ -7,55 +7,56 @@
     <script>
         (function () {
             Polymer({
-                publish: {
-                    /**
-                     * Fired when a user has logged in successfully.
-                     *
-                     * @event logged-in
-                     */
+                /**
+                 * Fired when a user has logged in successfully.
+                 *
+                 * @event logged-in
+                 */
 
-                    /**
-                     * Fired when a user has logged out successfully.
-                     *
-                     * @event logged-out
-                     */
+                /**
+                 * Fired when a user has logged out successfully.
+                 *
+                 * @event logged-out
+                 */
 
-                    /**
-                     * Fired when an error occurs.
-                     *
-                     * @event error
-                     */
+                /**
+                 * Fired when an error occurs.
+                 *
+                 * @event error
+                 */
 
-                    /**
-                     * Domain of auth0 account.
-                     *
-                     * @attribute domain
-                     * @type String
-                     */
-                    domain: null,
-                    /**
-                     * Client id of auth0 account.
-                     *
-                     * @attribute clientId
-                     * @type String
-                     */
-                    clientId: null,
-                    /**
-                     * Whether to login automatically once polymer ready event
-                     * fires.
-                     *
-                     * @attribute autoLogin
-                     * @type Boolean
-                     */
-                    autoLogin: false,
-                    /**
-                     * The profile of the logged in user.
-                     *
-                     * @attribute autoLogin
-                     * @type Boolean
-                     */
-                    profile: null
-                },
+                /**
+                 * Domain of auth0 account.
+                 *
+                 * @attribute domain
+                 * @type String
+                 */
+                domain: null,
+                
+                /**
+                 * Client id of auth0 account.
+                 *
+                 * @attribute clientId
+                 * @type String
+                 */
+                clientId: null,
+                
+                /**
+                 * Whether to login automatically once polymer ready event
+                 * fires.
+                 *
+                 * @attribute autoLogin
+                 * @type Boolean
+                 */
+                autoLogin: false,
+                
+                /**
+                 * The profile of the logged in user.
+                 *
+                 * @attribute autoLogin
+                 * @type Boolean
+                 */
+                profile: null,
                 token: null,
                 auth0lock: null,
                 delegate: function (options, callBack) {
@@ -99,7 +100,6 @@
                     this.fire('logged-out');
                 },
                 ready: function () {
-                    this.lock = new Auth0Lock('dylAOkzVGWLhEIOW2xacfRIrHueg6Ewm', 'epilith.auth0.com');
                     if (this.autoLogin) {
                         this.login();
                     }
