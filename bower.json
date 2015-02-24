@@ -2,6 +2,6 @@
   "name": "auth0-lock",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#master",
+    "polymer": "Polymer/polymer#master"
   }
 }
